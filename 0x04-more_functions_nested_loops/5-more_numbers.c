@@ -1,18 +1,27 @@
 #include "main.h"
 /**
- * print_most_numbers - print numbers except 2 and 4
- * Return: void
+ * more_numbers - print 0 to 15 10 times on different lines.
+ * Return: void.
  */
-void print_most_numbers(void)
+void more_numbers(void)
 {
-int n;
+int i, j, n;
 
-n = '0';
-while (n <= '9')
+for (i = 0; i < 10; ++i)
 {
-if (n != '2' && n != '4')
-_putchar(n);
-++n;
+for (j = 0, n = 0; j < 15; ++j, ++n)
+{
+if (j > 9)
+{
+_putchar('1');
+}
+if (j > 9)
+{
+n = j % 10;
+}
+_putchar(n + '0');
 }
 _putchar('\n');
+}
+
 }
